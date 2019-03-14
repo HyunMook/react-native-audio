@@ -259,7 +259,7 @@ RCT_EXPORT_METHOD(startRecording)
 RCT_EXPORT_METHOD(stopRecording)
 {
   [_audioRecorder stop];
-  [_recordSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+  [_recordSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionAllowBluetooth error:nil];
   _prevProgressUpdateTime = nil;
 }
 
